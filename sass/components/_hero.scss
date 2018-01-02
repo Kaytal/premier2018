@@ -1,0 +1,34 @@
+.hero-wrapper {
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2vw 1em;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+.grey-bar {
+    text-align: center;
+    padding: .5em 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1vw;
+    @media (min-width: $tablet-large) {
+        font-size: 1.5em;
+    }
+    &--dark {
+        color: $white;
+        background-color: $yet-another-grey;
+    }
+    &--light {
+        color: $brand-primary;
+        background-color: $grey;
+    }
+}

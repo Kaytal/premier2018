@@ -1,0 +1,92 @@
+.site-info {
+    text-align: center;
+    background-color: $grey;
+    padding: 1em 0;
+    color: $font-grey;
+    line-height: 1.7;
+    &__copyright {
+        font-weight: 300;
+    }
+    &__phone {
+        font-weight: 600;
+    }
+}
+
+.socials-bar {
+    background-color: $brand-primary;
+    padding: 2em;
+    .container {
+        @media (min-width: $tablet-small) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .klove-cruise-logo {
+        max-width: 250px;
+        @media (max-width: $tablet-small) {
+            margin: 0 auto;
+        }
+    }
+    .socials {
+        .lead {
+            color: white;
+            font-size: 1.75em;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        p {
+            margin: 0;
+            text-align: center;
+        }
+        img {
+            width: 25px;
+            margin: 0 .5em;
+            @media (min-width: $tablet-small) {
+                width: 50px;
+            }
+        }
+    }
+}
+
+.footer-logos {
+    background-color: $white;
+    text-align: center;
+    padding: 2em 0;
+    img {
+        padding: 0 2.5em;
+        max-width: 250px;
+    }
+}
+
+.footer-nav-wrapper {
+    padding: 1em;
+    .menu {
+        margin: 0;
+        list-style-type: none;
+        padding: 0;
+        li {
+            a {
+                display: block;
+                width: 100%;
+                line-height: 1.7;
+                color: $font-grey;
+                text-decoration: none;
+                font-size: 1.2em;
+                font-weight: 600;
+                &:hover {
+                    color: $brand-primary;
+                }
+            }
+            &.current-menu-item {
+                a {
+                    color: $brand-primary;
+                }
+            }
+        }
+    }
+    @media( min-width: $tablet-small ) {
+        display: flex;
+        justify-content: space-around;
+    }
+}

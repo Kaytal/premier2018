@@ -1,0 +1,79 @@
+.content-row {
+    color: $font-dark-grey;
+    p {
+        line-height: 3;
+    }
+}
+
+.schedule-row {
+    position: relative;
+    padding-bottom: 3vw;
+}
+
+.itinerary-row {
+    background-color: $grey;
+}
+
+.ports-row {
+    position: relative;
+    padding-bottom: 7vw;
+    padding-top: 2em;
+    background-color: $brand-primary;
+    color: $white;
+    p {
+        line-height: 2;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    .swiper-container {
+        padding: 0 3rem;
+        max-width: calc(1170px - 6rem);
+    }
+}
+
+.ship-row {
+    padding: 1em;
+    img {
+        margin-left: auto;
+        display: block;
+    }
+}
+.ship-sub-content {
+    padding-top: 2rem;
+    h3 {
+        color: $brand-primary;
+    }
+}
+
+.image-triptych {
+    background-color: $grey;
+    .container {
+        @media(min-width: $tablet-small) {
+            display: flex;
+        }
+        .triptych-image {
+            flex: 1;
+            padding: 1em;
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.singles-ministry-wrapper {
+    @media (min-width: $tablet-small) {
+        display: flex;
+    }
+    .single {
+        flex: 1;
+        border: .6rem solid $brand-primary;
+        margin: 1rem;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

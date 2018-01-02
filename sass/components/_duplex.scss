@@ -1,0 +1,32 @@
+.duplex-row {
+    position: relative;
+    .middle-logo {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        max-width: 30%;
+        @media(min-width: $tablet-small) {
+            max-width: 20%;
+        }
+    }
+}
+.duplex {
+    @media(min-width: $tablet-small) {
+        display: flex;
+    }
+    &-item {
+        flex: 1;
+        position: relative;
+        .btn {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+        img {
+            display: block;
+        }
+    }
+}
