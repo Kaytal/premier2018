@@ -3,7 +3,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
+    sourcemaps = require('gulp-sourcemaps'),
     rename = require('gulp-rename'),
     browserSync = require('browser-sync'),
     concat = require('gulp-concat'),
@@ -17,8 +17,10 @@ gulp.task('default', ['sass', 'sass:watch', 'scripts', 'script:watch', 'browser-
 
 gulp.task('sass', function() {
    return gulp.src('sass/**/*.scss')
+       .pipe(sourcemaps.init())
        .pipe(sass().on('error', sass.logError))
        .pipe(autoprefixer())
+       .pipe(sourcemaps.write())
        .pipe(gulp.dest('./'))
        .pipe(browserSync.stream());
 });
@@ -43,6 +45,6 @@ gulp.task('sass:watch', function () {
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        proxy: 'klove2018.dev'
+        proxy: 'premier2018.test'
     });
 });
