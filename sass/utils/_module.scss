@@ -1,7 +1,1 @@
-$container-width: calc(1170px - 2em);
-
-.container {
-    max-width: $container-width;
-    margin: 0 auto;
-    padding: 0 1em;
-}
+@import "utility-functions";
