@@ -39,3 +39,15 @@
             </svg>
         </a>
     </div>
+    <div class="event-rotator">
+        <?php query_posts( 'post_type=event' ); ?>
+        <?php while ( have_posts() ) : the_post(); ?>
+            <div class="rotator">
+                <?php the_title(); ?>
+                <?php echo $post->ID ?>
+                <?php echo get_field('rotator_thumb'); ?>
+                <?php echo get_field('rotator_logo'); ?>
+            </div>
+        <?php endwhile; ?>
+    </div>
+    
