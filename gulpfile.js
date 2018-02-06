@@ -45,6 +45,6 @@ gulp.task('sass:watch', function () {
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        proxy: 'premier2018.test'
+        proxy: 'vccw.test'
     });
 });
