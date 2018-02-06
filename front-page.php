@@ -34,12 +34,17 @@
                     </a>
                 </div>
             </div>
-            <div class="triptych-row">
+            <div class="homepage-event__triptych triptych-row">
                 <?php for($i=1; $i < 4; $i++ ) : ?>
-                    <div class="triptych-item">
-                        <?php echo get_field('triptych_' . $i . '_title'); ?>
-                        <?php echo get_field('triptych_' . $i . '_text'); ?>
-                        <?php echo get_field('triptych_' . $i . '_background_image'); ?>
+                    <div class="homepage-event__triptych-item triptych-item" style="background-image:url('<?php echo get_field('triptych_' . $i . '_background_image')['url']; ?>');">
+                        <div class="triptych-item__content">
+                            <h3 class="triptych-item__header">
+                                <?php echo get_field('triptych_' . $i . '_title'); ?>
+                            </h3>
+                            <p class="triptych-item__text">
+                                <?php echo get_field('triptych_' . $i . '_text'); ?>
+                            </p>
+                        </div>
                     </div>
                 <?php endfor ?>
             </div>

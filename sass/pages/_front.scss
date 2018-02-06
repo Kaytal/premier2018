@@ -134,4 +134,66 @@
             padding-right: 2em;
         }
     }
+
+    &__triptych {
+        border-bottom: 5.1875rem solid $color-dark-grey;
+        display: flex;
+
+        &-item {
+            flex: 1;
+        }
+    }
+
+    .triptych-item {
+        font-size: 0.8125rem;
+        font-weight: 500;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        padding: 30em 2.75em 23em 2.75em;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+
+        @supports (background-blend-mode: multiply) {
+            background-color: $color-premier-blue;
+            background-blend-mode: multiply;
+        }
+
+        @supports not (background-blend-mode: multiply) {
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: -1px;
+                right: -1px;
+                bottom: -1px;
+                left: -1px;
+                z-index: 1;
+                background-color: darken($color-premier-blue, 25%);
+                opacity: .5;
+            }
+        }
+
+        &__content {
+            position: relative;
+            z-index: 2;
+        }
+
+        &__header {
+            font-weight: 700;
+            font-size: 2em;
+            width: 100%;
+            box-sizing: border-box;
+            padding: .5em;
+            border: .15em solid $white;
+            border-radius: 1em;
+            background-color: transparentize($color-dark-grey, .75);
+        }
+
+        &__text {
+            line-height: 2;
+        }
+    }
 }
