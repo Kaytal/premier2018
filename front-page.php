@@ -16,10 +16,24 @@
                     <span><?php the_title(); ?></span>
                 </h2>
             </div>
-            <?php echo get_field('event_logo'); ?>
-            <?php echo get_field('event_date'); ?>
-            <?php echo get_field('site_url'); ?>
-            <?php echo get_field('book_now_link'); ?>
+            <div class="homepage-event__info">
+                <div class="homepage-event__info-block">
+                    <img class="homepage-event__logo" src="<?php echo get_field('event_logo')['url']; ?>" alt="<?php echo get_field('event_logo')['alt']; ?>">
+                </div>
+                <div class="homepage-event__info-block">
+                    <span class="homepage-event__date">
+                        <?php echo get_field('event_date'); ?>
+                    </span>
+                    <a class="homepage-event__link" href="<?php echo get_field('site_url'); ?>">
+                        Visit Site
+                    </a>
+                </div>
+                <div class="homepage-event__info-block">
+                    <a class="homepage-event__info-block homepage-event__book-now" href="<?php echo get_field('book_now_link'); ?>">
+                        <span>Book<br/>Now</span>
+                    </a>
+                </div>
+            </div>
             <div class="triptych-row">
                 <?php for($i=1; $i < 4; $i++ ) : ?>
                     <div class="triptych-item">
