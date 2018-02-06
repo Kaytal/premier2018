@@ -3,11 +3,19 @@
     <?php query_posts( 'post_type=event' ); ?>
     <?php while ( have_posts() ) : the_post(); ?>
         <div class="homepage-event">
-            <?php the_title(); ?>
             <?php echo $post->ID ?>
-            <?php echo get_field('video_mp4'); ?>
-            <?php echo get_field('video_webm'); ?>
-            <?php echo get_field('video_poster'); ?>
+            <div class="homepage-event__video" style="background-image:url(<?php echo get_field('video_poster')['url']; ?>);">
+                <div class="homepage-event__video-button"></div>
+                <?php echo get_field('video_mp4'); ?>
+                <?php echo get_field('video_webm'); ?>
+                <h2 class="homepage-event__title">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <title>triangle</title>
+                        <polygon points="100 0 0 100 100 100 100 0" fill="#fff"/>
+                    </svg>
+                    <span><?php the_title(); ?></span>
+                </h2>
+            </div>
             <?php echo get_field('event_logo'); ?>
             <?php echo get_field('event_date'); ?>
             <?php echo get_field('site_url'); ?>

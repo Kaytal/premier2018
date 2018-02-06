@@ -1,0 +1,62 @@
+.homepage-event {
+    &__video {
+        height: 90vh;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        border-bottom: 3.75rem solid $white;;
+
+        &-button {
+            font-size: 7rem;
+            height: 1em;
+            width: 1em;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            box-sizing: border-box;
+            border: .25rem solid $white;
+            border-radius: 50%;
+
+            &:after {
+                content: '';
+                display: block;
+                height: 0;
+                width: 0;
+                border-top: .25em solid transparent;
+                border-bottom: .25em solid transparent;
+                border-left: .4em solid $white;
+                position: absolute;
+                left: 35.5%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__title {
+        color: $color-premier-blue;
+        font-size: 1.875rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        background-color: $white;
+        margin-left: auto;
+        position: absolute;
+        bottom: -3.25rem;
+        right: 0;
+        padding: 1em 4.675em 1em 1em;
+
+        svg {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 100%;
+            height: 100%;
+
+            * {
+                fill: $white;
+            }
+        }
+    }
+}
