@@ -435,6 +435,195 @@ h1, h2, h3, h4, h5 {
   .social:hover svg {
     fill: #ffffff; }
 
+.homepage-event {
+  overflow: hidden; }
+  .homepage-event__video {
+    height: 90vh;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    border-bottom: 3.75rem solid #ffffff; }
+    .homepage-event__video-button {
+      font-size: 7rem;
+      height: 1em;
+      width: 1em;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+              transform: translateX(-50%) translateY(-50%);
+      box-sizing: border-box;
+      border: 0.25rem solid #ffffff;
+      border-radius: 50%; }
+      .homepage-event__video-button:after {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        border-top: .25em solid transparent;
+        border-bottom: .25em solid transparent;
+        border-left: 0.4em solid #ffffff;
+        position: absolute;
+        left: 35.5%;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%); }
+  .homepage-event__title {
+    color: #00c6ff;
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    background-color: #ffffff;
+    margin-left: auto;
+    position: absolute;
+    bottom: -3.25rem;
+    right: 0;
+    padding: 1em 4.675em 1em 1em; }
+    .homepage-event__title svg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 100%;
+      height: 100%; }
+      .homepage-event__title svg * {
+        fill: #ffffff; }
+  .homepage-event__info {
+    background: #00c6ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    font-size: 1.1875rem; }
+    .homepage-event__info-block {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+  .homepage-event__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: .8em auto;
+    max-height: 2.5em; }
+  .homepage-event__date {
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%; }
+  .homepage-event__link {
+    color: #1f1f1f;
+    font-weight: 700;
+    text-transform: lowercase;
+    display: block;
+    text-align: center;
+    font-size: .75em;
+    width: 100%; }
+  .homepage-event__book-now {
+    border-left: 0.125rem solid #ffffff;
+    display: block;
+    height: 100%;
+    -webkit-transform: skew(-15deg);
+            transform: skew(-15deg);
+    padding: .5em 0;
+    margin-right: -2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: .2s;
+    width: 100%;
+    margin-left: 15vw;
+    padding-right: 15vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .homepage-event__book-now:hover {
+      cursor: pointer;
+      background-color: #00b2e6; }
+    .homepage-event__book-now span {
+      -webkit-transform: skew(15deg);
+              transform: skew(15deg);
+      font-weight: 700;
+      color: #1f1f1f;
+      display: block;
+      text-align: center;
+      line-height: 1;
+      padding-right: 2em; }
+  .homepage-event__triptych {
+    border-bottom: 5.1875rem solid #1f1f1f;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .homepage-event__triptych-item {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+  .homepage-event .triptych-item {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    padding: 30em 2.75em 23em 2.75em;
+    background-position: center center;
+    background-size: cover;
+    position: relative; }
+    @supports (background-blend-mode: multiply) {
+      .homepage-event .triptych-item {
+        background-color: #00c6ff;
+        background-blend-mode: multiply; } }
+    @supports not (background-blend-mode: multiply) {
+      .homepage-event .triptych-item:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        bottom: -1px;
+        left: -1px;
+        z-index: 1;
+        background-color: #006380;
+        opacity: .5; } }
+    .homepage-event .triptych-item__content {
+      position: relative;
+      z-index: 2; }
+    .homepage-event .triptych-item__header {
+      font-weight: 700;
+      font-size: 2em;
+      width: 100%;
+      box-sizing: border-box;
+      padding: .5em;
+      border: 0.15em solid #ffffff;
+      border-radius: 1em;
+      background-color: rgba(31, 31, 31, 0.25); }
+    .homepage-event .triptych-item__text {
+      line-height: 2; }
+
 /**
 base/ – contains global styles, such as resets, typography, colors, etc.
 components/ – contains each self-contained component in its own .scss partial

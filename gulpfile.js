@@ -45,6 +45,6 @@ gulp.task('sass:watch', function () {
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        proxy: 'vccw.test/'
+        proxy: 'vccw.test'
     });
 });
