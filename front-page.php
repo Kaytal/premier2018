@@ -3,7 +3,6 @@
     <?php query_posts( 'post_type=event' ); ?>
     <?php while ( have_posts() ) : the_post(); ?>
         <div class="homepage-event">
-            <?php echo $post->ID ?>
             <div class="homepage-event__video" style="background-image:url(<?php echo get_field('video_poster')['url']; ?>);">
                 <div class="homepage-event__video-button"></div>
                 <?php echo get_field('video_mp4'); ?>

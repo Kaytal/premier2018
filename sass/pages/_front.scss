@@ -48,6 +48,7 @@
         bottom: -3.25rem;
         right: 0;
         padding: 1em 4.675em 1em 1em;
+        box-sizing: border-box;
 
         svg {
             position: absolute;
@@ -58,6 +59,16 @@
 
             * {
                 fill: $white;
+            }
+        }
+
+        @include phone-smaller {
+            width: 100%;
+            text-align: center;
+            padding: 1em;
+
+            svg {
+                display: none;
             }
         }
     }
@@ -74,6 +85,10 @@
             justify-content: center;
             align-items: center;
             flex: 1;
+        }
+
+        @include phone-smaller {
+            display: block;
         }
     }
 
@@ -101,6 +116,12 @@
         text-align: center;
         font-size: .75em;
         width: 100%;        
+
+        @include phone-smaller {
+            font-size: 1em;
+            padding: .75em;
+            text-decoration: none;
+        }
     }
 
     &__book-now {
@@ -135,11 +156,27 @@
             line-height: 1;
             padding-right: 2em;
         }
+
+        @include phone-smaller {
+            margin: 0;
+            border: 0;
+            padding: 1em 2em;
+            transform: skew(0deg);
+
+            span {
+                transform: skew(0deg);
+                padding: 0;
+            }
+        }
     }
 
     &__triptych {
         border-bottom: 5.1875rem solid $color-dark-grey;
         display: flex;
+
+        @include phone-smaller {
+            display: block;
+        }
 
         &-item {
             flex: 1;
@@ -147,7 +184,7 @@
     }
 
     .triptych-item {
-        font-size: 0.8125rem;
+        font-size: 1rem;
         font-weight: 500;
         color: $white;
         text-align: center;
@@ -157,24 +194,47 @@
         background-position: center center;
         background-size: cover;
         position: relative;
+        transition: .2s;
+
+        @include tablet-smaller {
+            padding: 15em 2.75em 11.5em 2.75em;
+        }
+
+        @include phone-smaller {
+            padding: 2.75em;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            bottom: -1px;
+            left: -1px;
+            z-index: 1;
+            background-color: darken($color-premier-blue, 25%);
+            opacity: .5;
+            transition: .2s;
+        }
 
         @supports (background-blend-mode: multiply) {
             background-color: $color-premier-blue;
             background-blend-mode: multiply;
+
+            &:before {
+                display: none;
+            }
         }
 
-        @supports not (background-blend-mode: multiply) {
+        &:hover {
+            
             &:before {
-                content: '';
-                display: block;
-                position: absolute;
-                top: -1px;
-                right: -1px;
-                bottom: -1px;
-                left: -1px;
-                z-index: 1;
-                background-color: darken($color-premier-blue, 25%);
-                opacity: .5;
+                opacity: 0;;
+            }
+
+            @supports (background-blend-mode: multiply) {
+                background-color: transparent;
             }
         }
 
@@ -185,10 +245,11 @@
 
         &__header {
             font-weight: 700;
-            font-size: 2em;
-            width: 100%;
+            font-size: 1.75em;
+            display: inline-block;
+            margin: 0 auto;
             box-sizing: border-box;
-            padding: .5em;
+            padding: .5em 1.5em;
             border: .15em solid $white;
             border-radius: 1em;
             background-color: transparentize($color-dark-grey, .75);
