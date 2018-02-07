@@ -3,11 +3,9 @@
     <?php query_posts( 'post_type=event' ); ?>
     <?php while ( have_posts() ) : the_post(); ?>
         <div class="homepage-event">
-            <?php echo $post->ID ?>
-            <div class="homepage-event__video" style="background-image:url(<?php echo get_field('video_poster')['url']; ?>);">
+            <div class="homepage-event__video">
+                <img src=<?php echo get_field('video_poster')['url']; ?> alt="" />
                 <div class="homepage-event__video-button"></div>
-                <?php echo get_field('video_mp4'); ?>
-                <?php echo get_field('video_webm'); ?>
                 <h2 class="homepage-event__title">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                         <title>triangle</title>
