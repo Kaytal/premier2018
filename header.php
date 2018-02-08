@@ -4,6 +4,7 @@
     <meta charset="<?php bloginfo('charset'); ?>"/>
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -39,18 +40,14 @@
             </svg>
         </a>
     </div>
-    <div class="event-rotator">
+    <div class="events-rotator">
         <?php query_posts( 'post_type=event' ); ?>
         <?php while ( have_posts() ) : the_post(); ?>
-            <div class="rotator">
-                <code>
-                    <?php var_dump(get_field('rotator_thumb')['url']); ?>
-                </code>
-                <hr/>
-                <code>
-                    <?php var_dump(get_field('rotator_logo')['url']); ?>
-                </code>
+            <div class="rotator" style="background-image: url(<?php echo get_field('rotator_thumb')['url'] ?>)">
+                <a class="rotator__link" href="#<?php echo $post->post_name ?>"></a>
+                <img class="rotator__logo" src="<?php echo get_field('rotator_logo')['url']; ?>" alt="<?php the_title(); ?>" />
             </div>
         <?php endwhile; ?>
+        <?php wp_reset_query(); ?>
     </div>
     

@@ -17,11 +17,14 @@
                 info@premier-events.com
             </a>
             <div class="copyright">
-                All Rights Reserved, Copyright &copy;2018
+                All Rights Reserved, Copyright &copy;<?php echo Date('Y'); ?>
             </div>
         </footer>
     </div>
     <?php wp_footer(); ?>
     <script src="<?php echo get_template_directory_uri() ?>/js/main.js"></script>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
 </body>
 </html>

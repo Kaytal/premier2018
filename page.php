@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-<section id="content" role="main">
+<section class="container" role="main">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <article class="generic-page">
             <header class="header">
                 <h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
             </header>

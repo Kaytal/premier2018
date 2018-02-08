@@ -3,7 +3,11 @@
     
     &__video {
         position: relative;
-        border-bottom: 3.75rem solid $white;;
+        border-bottom: 3.75rem solid $white;
+        img {
+            display: block;
+            width: 100%;
+        }
 
         &-button {
             font-size: 7rem;
@@ -109,6 +113,7 @@
         margin-right: -2em;
         box-sizing: border-box;
         text-decoration: none;
+        text-transform: uppercase;
         transition: .2s;
         width: 100%;
         margin-left: 15vw;
@@ -135,7 +140,7 @@
     }
 
     &__triptych {
-        border-bottom: 5.1875rem solid $color-dark-grey;
+        border-bottom: 4rem solid $color-dark-grey;
         display: flex;
 
         &-item {
@@ -144,13 +149,12 @@
     }
 
     .triptych-item {
-        font-size: 0.8125rem;
         font-weight: 500;
         color: $white;
         text-align: center;
         text-transform: uppercase;
         box-sizing: border-box;
-        padding: 30em 2.75em 23em 2.75em;
+        padding: 10rem 2.75rem 10rem 2.75rem;
         background-position: center center;
         background-size: cover;
         position: relative;
@@ -162,17 +166,21 @@
 
         &__header {
             font-weight: 700;
-            font-size: 2em;
-            width: 100%;
+            font-size: 2rem;
+            display: inline-block;
             box-sizing: border-box;
-            padding: .5em;
-            border: .15em solid $white;
-            border-radius: 1em;
+            padding: .5rem 3rem;
+            border: .25rem solid $white;
+            border-radius: 2rem;
             background-color: transparentize($color-dark-grey, .75);
         }
 
         &__text {
             line-height: 2;
+            font-size: 1.125rem;
+            letter-spacing: 4px;
+            max-width: 250px;
+            margin: 0 auto;
         }
     }
 }
