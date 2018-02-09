@@ -17,7 +17,7 @@
                 info@premier-events.com
             </a>
             <div class="copyright">
-                All Rights Reserved, Copyright &copy;<?php echo Date('Y'); ?>
+            All Rights Reserved, Copyright &copy;<?php echo Date('Y'); ?>
             </div>
         </footer>
     </div>

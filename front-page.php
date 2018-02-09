@@ -3,11 +3,11 @@
     <?php query_posts( 'post_type=event' ); ?>
     <?php while ( have_posts() ) : the_post(); ?>
         <div class="homepage-event" id="<?php echo $post->post_name ?>">
-            <div class="homepage-event__video">
-                <img src=<?php echo get_field('video_poster')['url']; ?> alt="" />
-                <a data-fancybox href="<?php echo get_field('video_link') ?>">
-                    <div class="homepage-event__video-button"></div>
-                </a>
+        <div class="homepage-event__video">
+            <img src=<?php echo get_field('video_poster')['url']; ?> alt="" />
+            <a data-fancybox href="<?php echo get_field('video_link') ?>">
+                <div class="homepage-event__video-button"></div>
+            </a>
                 <h2 class="homepage-event__title">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                         <title>triangle</title>
