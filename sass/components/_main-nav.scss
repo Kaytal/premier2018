@@ -84,6 +84,7 @@
 .main-navigation {
     flex: 1;
     text-align: right;
+    overflow: hidden;
     ul {
         list-style-type: none;
         padding: 0;
