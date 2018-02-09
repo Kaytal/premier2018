@@ -1,0 +1,40 @@
+.events-rotator {
+    @include tablet-larger {
+        display: flex;
+    }
+    border-bottom: 4rem solid $color-dark-grey;
+}
+
+.rotator {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    transition: filter .5s;
+    filter: grayscale(100%);
+    cursor: pointer;
+    &:hover {
+        filter: grayscale(0%);
+    }
+    @include tablet-larger {
+        flex: 1;
+        height: 30vw;
+    }
+    &__link {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+    }
+    &__logo {
+        display: block;
+        max-width: 80%;
+        margin: 0 auto;
+        @include tablet-larger {
+            transform: translateX(-50%);
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+        }
+        
+    }
+}
