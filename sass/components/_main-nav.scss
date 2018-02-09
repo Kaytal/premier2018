@@ -114,6 +114,7 @@
         height: auto;
         text-align: center;
         transition: max-height .5s;
+        box-shadow: 0px 2px 3px transparentize($color-lighter-grey, .5);
         &.expanded {
             max-height: 80vh;
             overflow: auto;
