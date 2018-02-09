@@ -1,4 +1,14 @@
 <?php get_header(); ?>
+<div class="events-rotator">
+        <?php query_posts( 'post_type=event' ); ?>
+        <?php while ( have_posts() ) : the_post(); ?>
+            <div class="rotator" style="background-image: url(<?php echo get_field('rotator_thumb')['url'] ?>)">
+                <a class="rotator__link" href="#<?php echo $post->post_name ?>"></a>
+                <img class="rotator__logo" src="<?php echo get_field('rotator_logo')['url']; ?>" alt="<?php the_title(); ?>" />
+            </div>
+        <?php endwhile; ?>
+        <?php wp_reset_query(); ?>
+    </div>
 <main id="content" role="main">
     <?php query_posts( 'post_type=event' ); ?>
     <?php while ( have_posts() ) : the_post(); ?>
