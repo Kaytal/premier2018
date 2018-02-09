@@ -1,0 +1,47 @@
+.contact-page {
+    display: flex;
+
+    @include tablet-smaller {
+        display: block;
+    }
+
+    h2 {
+        font-size: 1.125rem;
+        color: $color-premier-blue;
+    }
+
+    input, textarea, .wpcf7-submit {
+        width: 100%;
+        padding: .5em;
+        box-sizing: border-box;
+    }
+
+    .wpcf7-submit {
+        color: $white;
+        background-color: $color-premier-blue;
+        padding: 1em;
+        border: 0;
+        transition: .2s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: darken($color-premier-blue, 5%);
+        }
+    }
+
+    .wpcf7 {
+        &:nth-child(1) {
+            flex: 3;
+            margin-right: 4rem;
+
+            @include tablet-smaller {
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+        }
+
+        &:nth-child(2) {
+            flex: 2;
+        }
+    }
+}

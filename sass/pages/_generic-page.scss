@@ -1,7 +1,21 @@
+.site {
+    overflow: hidden;
+}
+
 .generic-page {
-    margin: 2rem 0;
+    margin: 0 0 2rem 0;
+
+    .header {
+        background-color: $color-premier-blue;
+        color: $white;
+        text-align: center;
+        margin: 0 -50vw;
+        padding: 3em 1em;
+        border-bottom: .25rem solid $color-dark-grey;
+        margin-bottom: 1rem;
+    }
+
     h1 {
-        color: $color-dark-grey;;
         font-size: 2.5rem;
         font-weight: 700;
         text-transform: uppercase;
