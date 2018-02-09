@@ -206,20 +206,6 @@
             padding: 2.75em;
         }
 
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: -1px;
-            right: -1px;
-            bottom: -1px;
-            left: -1px;
-            z-index: 1;
-            background-color: darken($color-premier-blue, 25%);
-            opacity: .5;
-            transition: .2s;
-        }
-
         &__content {
             position: relative;
             z-index: 2;
