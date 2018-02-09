@@ -12,7 +12,6 @@
     background-repeat: no-repeat;
     width: 100%;
     transition: filter .5s;
-    filter: grayscale(100%);
     cursor: pointer;
     &:hover {
         filter: grayscale(0%);
@@ -22,6 +21,7 @@
         box-sizing: border-box;
     }
     @include tablet-larger {
+        filter: grayscale(100%);
         flex: 1;
         height: 30vw;
     }

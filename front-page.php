@@ -48,9 +48,11 @@
                 <?php for($i=1; $i < 4; $i++ ) : ?>
                     <div class="homepage-event__triptych-item triptych-item" style="background-image:url('<?php echo get_field('triptych_' . $i . '_background_image')['url']; ?>');">
                         <div class="triptych-item__content">
-                            <h3 class="triptych-item__header">
-                                <?php echo get_field('triptych_' . $i . '_title'); ?>
-                            </h3>
+                            <a href="<?php echo get_field('triptych_' . $i . '_link'); ?>" >
+                                <h3 class="triptych-item__header">
+                                    <?php echo get_field('triptych_' . $i . '_title'); ?>
+                                </h3>
+                            </a>
                             <p class="triptych-item__text">
                                 <?php echo get_field('triptych_' . $i . '_text'); ?>
                             </p>

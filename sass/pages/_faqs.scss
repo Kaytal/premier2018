@@ -1,9 +1,20 @@
 .faq-page-details {
     margin-bottom: 2rem;
-}
-
-.faq-list {
-    padding: 2rem 0;
+    header {
+        background-color: $color-premier-blue;
+        color: $white;
+        text-align: center;
+        margin: 0 -50vw;
+        padding: 3em 1em;
+        border-bottom: .25rem solid $color-dark-grey;
+        margin-bottom: 1rem;
+    }
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+    }
 }
 
 .faq-item {
